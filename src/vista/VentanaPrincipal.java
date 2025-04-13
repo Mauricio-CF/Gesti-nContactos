@@ -178,6 +178,7 @@ public class VentanaPrincipal extends JFrame {
                     modeloTabla.setValueAt(categoria, fila, 3);
                     modeloTabla.setValueAt(favorito, fila, 4);
                     JOptionPane.showMessageDialog(this, "Contacto modificado.");
+                    limpiarCampos();
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(this, "Error al modificar.");
                 }
@@ -192,6 +193,7 @@ public class VentanaPrincipal extends JFrame {
                     logica.eliminarContacto(fila);
                     modeloTabla.removeRow(fila);
                     JOptionPane.showMessageDialog(this, "Contacto eliminado.");
+                    limpiarCampos();
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(this, "Error al eliminar.");
                 }
